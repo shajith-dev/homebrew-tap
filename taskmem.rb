@@ -5,21 +5,21 @@
 class Taskmem < Formula
   desc "Task-tracking CLI for LLM agents, backed by PostgreSQL"
   homepage "https://github.com/shajith-dev/taskmem"
-  version "0.3.0"
+  version "0.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shajith-dev/taskmem/releases/download/v0.3.0/taskmem_0.3.0_darwin_amd64.tar.gz"
-      sha256 "783abf83201d75176fad37d5b7ae55666926a3271a3ab9bd96269ee957732f24"
+      url "https://github.com/shajith-dev/taskmem/releases/download/v0.4.0/taskmem_0.4.0_darwin_amd64.tar.gz"
+      sha256 "544cd03eba04ae1ec39d03498be3a8f8177038f22925bd72f783c95301c1f237"
 
       define_method(:install) do
         bin.install "taskmem"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shajith-dev/taskmem/releases/download/v0.3.0/taskmem_0.3.0_darwin_arm64.tar.gz"
-      sha256 "2e0938ac3134ea479ce47f70b93a5cd096b0bca95d94770bc22254f131334c30"
+      url "https://github.com/shajith-dev/taskmem/releases/download/v0.4.0/taskmem_0.4.0_darwin_arm64.tar.gz"
+      sha256 "87ef6bbdf6b8e84bd8c23393d83021189c396e96d3ce661d102dc71c5d03ac06"
 
       define_method(:install) do
         bin.install "taskmem"
@@ -29,15 +29,15 @@ class Taskmem < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shajith-dev/taskmem/releases/download/v0.3.0/taskmem_0.3.0_linux_amd64.tar.gz"
-      sha256 "f68f29b1ead045aea3e579bb16f99afb60f1ad67fb43a1c9199a5e9fae5b87b8"
+      url "https://github.com/shajith-dev/taskmem/releases/download/v0.4.0/taskmem_0.4.0_linux_amd64.tar.gz"
+      sha256 "1a67121eda66a823d88a16a6ceeea5ec258352ff15e9f73b2ead2888380844d5"
       define_method(:install) do
         bin.install "taskmem"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shajith-dev/taskmem/releases/download/v0.3.0/taskmem_0.3.0_linux_arm64.tar.gz"
-      sha256 "5887d975fd50779834d8bd2262b0b553b9a36f2936252bf8c4c1aaa7ad52c24e"
+      url "https://github.com/shajith-dev/taskmem/releases/download/v0.4.0/taskmem_0.4.0_linux_arm64.tar.gz"
+      sha256 "ccf02b04610de6215b6dcd083f238da3b6ad1b1db75d5229ac06607a6086d87e"
       define_method(:install) do
         bin.install "taskmem"
       end
